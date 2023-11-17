@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Website</title>
+    <title>NewsHub</title>
     <link rel="stylesheet" href="news.css">
 </head> 
 <body>
 
     <header>
-        <h1>Welcome to the News Website</h1>
+        <h1>NewsHub</h1>
         <div>
             <label for="category">Select Category:</label>
             <select id="category" name="category" onchange="changeCategory()">
@@ -24,7 +24,7 @@
         </div>
         <div>
             <label for="search">Search:</label>
-            <input type="text" id="search" name="search" placeholder="Enter keywords...">
+            <input type="text" id="search-bar" name="search" placeholder="Enter keywords...">
             <button onclick="searchNews()">Search</button>
             <button onclick="searchNews()">Search</button>
             <button onclick="searchNews()">Search</button>
@@ -34,9 +34,11 @@
     <section id="content">
         <h2>Top Headlines</h2>
         <div id="newsList" class="article-list carousel-container"></div>
+        <div id="search-results"></div>
     </section>
 
     <script src="news.js"></script>
+    
 
 </body>
 </html>

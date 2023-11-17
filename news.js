@@ -100,5 +100,32 @@ function changeCategory() {
     fetchData(apiUrl);
 }
 
+// JavaScript to handle the search functionality
+document.getElementById('search-bar').addEventListener('input', function () {
+    // Get the input value
+    var searchTerm = this.value.toLowerCase();
+
+    // Get the container where search results will be displayed
+    var searchResultsContainer = document.getElementById('search-results');
+
+    // Clear previous search results
+    searchResultsContainer.innerHTML = '';
+
+    // Perform a search (you may fetch data from a server or use predefined data)
+    var searchData = ['Result 1', 'Result 2', 'Result 3', 'Result 4', 'Result 5'];
+
+    // Filter the data based on the search term
+    var filteredResults = searchData.filter(function (result) {
+        return result.toLowerCase().includes(searchTerm);
+    });
+
+    // Display the filtered results
+    filteredResults.forEach(function (result) {
+        var resultElement = document.createElement('p');
+        resultElement.textContent = result;
+        searchResultsContainer.appendChild(resultElement);
+    });
+});
+
 // Fetch data for the default category on page load
 changeCategory();
