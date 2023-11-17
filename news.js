@@ -94,8 +94,8 @@ function createArticleElement(article) {
         image.alt = article.title;
 
         // Set a fixed size for the image
-        image.style.width = '300px';
-        image.style.height = '300px';
+        image.style.width = '150px';
+        image.style.height = '150px';
 
         articleElement.appendChild(image);
     }
@@ -183,15 +183,15 @@ function changeCategory() {
     // Determine the API URLs for news and trends based on the selected category
     var newsApiUrl = 'https://newsapi.org/v2/everything?' + 
     'q=' + selectedCategory
-    + '&apiKey=8c516ec334474e21b7a378c18f5ed494';
+    + '&apiKey=23889fc613ae4969abec1762de4c87c8';
 
     var trendsApiUrl = 'https://newsapi.org/v2/everything?pageSize=10&' +
     'q=trending news ' + selectedCategory
-    + '&apiKey=8c516ec334474e21b7a378c18f5ed494';
+    + '&apiKey=23889fc613ae4969abec1762de4c87c8';
 
-    var headlinesApiUrl = 'https://newsapi.org/v2/everything?pageSize=5&' +
+    var headlinesApiUrl = 'https://newsapi.org/v2/everything?pageSize=6&' +
     'q=headlines     ' + selectedCategory
-    + '&apiKey=8c516ec334474e21b7a378c18f5ed494';
+    + '&apiKey=23889fc613ae4969abec1762de4c87c8';
 
     fetchNews(newsApiUrl);
     fetchTrends(trendsApiUrl);

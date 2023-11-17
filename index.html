@@ -31,27 +31,32 @@
     </header>
 
 
-<main>
-        <!-- Headlines Section -->
-        <section id="headlinesSection">
-            <h2>Headlines</h2>
-            <div id="headlinesList"></div>
-        </section>
-
-        <!-- Side-by-Side Layout for Trends and More News -->
-        <div class="content-area">
-            <!-- Trends Section -->
-            <aside id="trendsSection">
-                <h2>Trends</h2>
-                <div id="trendList"></div>
-            </aside>
-
-            <!-- News List Section -->
-            <section id="newsSection">
-                <h2>More News</h2>
-                <div id="newsList"></div>
+    <main>
+        <div class="content-wrapper">
+            <!-- Headlines Section -->
+            <section id="headlinesSection" class="content-block">
+                <h2>Headlines</h2>
+                <div id="headlinesList" class="headlines-grid">
+                    <!-- Headline articles go here -->
+                </div>
             </section>
+    
+            <!-- Trends Section -->
+            <aside id="trendsSection" class="sidebar">
+                <h2>Trends</h2>
+                <div id="trendList" class="trends-list">
+                    <!-- Trend articles go here -->
+                </div>
+            </aside>
         </div>
+    
+        <!-- News List Section -->
+        <section id="newsSection" class="newsSection">
+            <h2>More News</h2>
+            <div id="newsList" class="news-list">
+                <!-- More news articles go here -->
+            </div>
+        </section>
     </main>
     
     <script src="news.js"></script>

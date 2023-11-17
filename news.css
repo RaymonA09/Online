@@ -15,7 +15,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #333;
+    background-color: #ff0000;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -27,56 +27,31 @@ header h1 {
     font-size: 24px;
 }
 
-/* Main content area styling */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+/* Main content wrapper */
+.content-block{
+    background-color: rgb(233, 255, 255);
 }
-
-/* Headlines Section */
-#headlinesSection {
-    margin-bottom: 20px;
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
 }
-
-#headlinesList {
+.headlines-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns, adjust as needed */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-/* Styling for the first headline */
-#headlinesList .article:first-child {
-    grid-column: 1 / 3; /* First article spans two columns */
-    grid-row: 1; /* First article stays in the first row */
-    font-size: 1.2em;
-    padding: 20px;
+.headline {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically if needed */
+    color: black;
     text-align: center;
-}
-
-#headlinesList .article:first-child img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-}
-
-#headlinesList .article {
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #headlinesList {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-
-    #headlinesList .article:first-child {
-        grid-column: auto; /* Reset on smaller screens */
-    }
+    font-size: 1em;
+    font-weight: bold;
 }
 
 /* Trends Section */
@@ -109,4 +84,9 @@ main {
     #trendsSection, #newsSection {
         width: 100%;
     }
+}
+
+.newsSection {
+    padding-left: 80px;
+    padding-right: 80px;
 }
