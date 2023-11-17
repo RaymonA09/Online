@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business News</title>
+    <link rel="stylesheet" href="business.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the News Website</h1>
+        <nav>
+            <ul>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="business.html">Business</a></li>
+            </ul>
+        </nav>
+        <div>
+            <label for="category">Select Category:</label>
+            <select id="category" name="category">
+                <option value="international">International</option>
+                <option value="local">Local</option>
+            </select>
+        </div>
+        <div>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Enter keywords...">
+            <button onclick="searchNews()">Search</button>
+        </div>
+    </header>
+    <h1>Business News</h1>
+    <div id="newsList"></div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">General</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="business.html">Business</a></li>
+        </ul>
+    </nav>
+
+    <script src="news.js"></script>
+
+</body>
+</html>

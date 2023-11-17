@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="news.css">
+</head> 
+<body>
+
+    <header>
+        <h1>Welcome to the News Website</h1>
+        <div>
+            <label for="category">Select Category:</label>
+            <select id="category" name="category" onchange="changeCategory()">
+                <option value="all">ALL</option>
+                <option value="sports">Sports</option>
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+
+            </select>
+        </div>
+        <div>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Enter keywords...">
+            <button onclick="searchNews()">Search</button>
+            <button onclick="searchNews()">Search</button>
+            <button onclick="searchNews()">Search</button>
+        </div>
+    </header>
+
+    <section id="content">
+        <h2>Top Headlines</h2>
+        <div id="newsList" class="article-list carousel-container"></div>
+    </section>
+
+    <script src="news.js"></script>
+
+</body>
+</html>
