@@ -87,15 +87,19 @@ function changeCategory() {
     if (category === 'all') {
         apiUrl = 'https://newsapi.org/v2/everything?q=top news international&from=2023-11-13&to=2023-11-16&sortBy=popularity&apiKey=374055a636cd4d828923a0fbb3136186';
     } else if (category === 'sports') {
-        apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=374055a636cd4d828923a0fbb3136186';
+        var apiUrl = 'https://newsapi.org/v2/everything?q=sports&apiKey=374055a636cd4d828923a0fbb3136186';
     } else if (category === 'business') {
-        var apiKey = '374055a636cd4d828923a0fbb3136186';
-        var apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=' + apiKey;
+        var apiUrl = 'https://newsapi.org/v2/everything?q=business&apiKey=374055a636cd4d828923a0fbb3136186';
     } else if (category === 'entertainment') {
-        var apiKey = '374055a636cd4d828923a0fbb3136186';
-        var apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=' + apiKey;
+        var apiUrl = 'https://newsapi.org/v2/everything?q=entertainment&apiKey=374055a636cd4d828923a0fbb3136186';
+    } else if (category === 'health'){
+        var apiUrl = 'https://newsapi.org/v2/everything?q=health&apiKey=374055a636cd4d828923a0fbb3136186';
+    } else if (category === 'science'){
+        var apiUrl = 'https://newsapi.org/v2/everything?q=science&apiKey=374055a636cd4d828923a0fbb3136186';
+    } else if (category === 'technology'){
+        var apiUrl = 'https://newsapi.org/v2/everything?q=technology&apiKey=374055a636cd4d828923a0fbb3136186';
     }
-    
+
 
     fetchData(apiUrl);
 }
