@@ -94,8 +94,8 @@ function createArticleElement(article) {
         image.alt = article.title;
 
         // Set a fixed size for the image
-        image.style.width = '150px';
-        image.style.height = '150px';
+        image.style.width = '200px';
+        image.style.height = '200px';
 
         articleElement.appendChild(image);
     }
@@ -103,6 +103,15 @@ function createArticleElement(article) {
     var titleElement = document.createElement('h2');
     titleElement.textContent = article.title;
     articleElement.appendChild(titleElement);
+
+    var sourceElement = document.createElement('p');
+    sourceElement.textContent = `Source: ${article.source.name}`;
+    articleElement.appendChild(sourceElement);
+
+    var publishedAtElement = document.createElement('p');
+    publishedAtElement.textContent = `Published At: ${article.publishedAt}`;
+    articleElement.appendChild(publishedAtElement);
+
 
     if (article.author) {
         var authorElement = document.createElement('p');
@@ -114,19 +123,7 @@ function createArticleElement(article) {
     descriptionElement.textContent = article.description;
     articleElement.appendChild(descriptionElement);
 
-    var sourceElement = document.createElement('p');
-    sourceElement.textContent = `Source: ${article.source.name}`;
-    articleElement.appendChild(sourceElement);
 
-    var publishedAtElement = document.createElement('p');
-    publishedAtElement.textContent = `Published At: ${article.publishedAt}`;
-    articleElement.appendChild(publishedAtElement);
-
-    if (article.content) {
-        var contentElement = document.createElement('p');
-        contentElement.textContent = `Content: ${article.content}`;
-        articleElement.appendChild(contentElement);
-    }
 
     var urlElement = document.createElement('a');
     urlElement.href = article.url;
@@ -146,12 +143,16 @@ function createarticle1Element(article1) {
     var titleLinkElement1 = document.createElement('a');
     titleLinkElement1.href = article1.url;
     titleLinkElement1.textContent = article1.title;
-
-    // Append the title link to the article element
     article1Element.appendChild(titleLinkElement1);
+
+    // Create and append the published date
+    var publishedAtElement1 = document.createElement('p');
+    publishedAtElement1.textContent = `Published At: ${article1.publishedAt}`;
+    article1Element.appendChild(publishedAtElement1);
 
     return article1Element;
 }
+
 
 function createHeadlineElement(headline) {
     var headlineElement = document.createElement('div');
@@ -181,17 +182,17 @@ function changeCategory() {
     var selectedCategory = document.getElementById('category').value;
 
     // Determine the API URLs for news and trends based on the selected category
-    var newsApiUrl = 'https://newsapi.org/v2/everything?' + 
+    var newsApiUrl = 'https://newsapi.org/v2/everything?sortBy=popularity&from=2023-11-15&' + 
     'q=' + selectedCategory
-    + '&apiKey=23889fc613ae4969abec1762de4c87c8';
+    + '&apiKey=e908d50bdad4444f90bc85f6c3dde7cf';
 
-    var trendsApiUrl = 'https://newsapi.org/v2/everything?pageSize=10&' +
+    var trendsApiUrl = 'https://newsapi.org/v2/everything?pageSize=5&' +
     'q=trending news ' + selectedCategory
-    + '&apiKey=23889fc613ae4969abec1762de4c87c8';
+    + '&apiKey=e908d50bdad4444f90bc85f6c3dde7cf';
 
-    var headlinesApiUrl = 'https://newsapi.org/v2/everything?pageSize=6&' +
-    'q=headlines     ' + selectedCategory
-    + '&apiKey=23889fc613ae4969abec1762de4c87c8';
+    var headlinesApiUrl = 'https://newsapi.org/v2/everything?sortBy=relevancy&pageSize=2&' +
+    'q=headlines ' + selectedCategory
+    + '&apiKey=e908d50bdad4444f90bc85f6c3dde7cf';
 
     fetchNews(newsApiUrl);
     fetchTrends(trendsApiUrl);
