@@ -10,27 +10,31 @@
 
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 10%; box-sizing: border-box;">
         <div class="left">
-             <img src="logo.png" style="width: 100x; height: 50px;">
+             <img src="logo.png" style="width: 100px; height: 50px;">
         </div>
         <div class="right" style="display: flex; align-items: center;">
             <div style="margin-right: 20px;">
                 <label for="category">Select Category:</label>
-            <select id="category" name="category" onchange="changeCategory()">
-                <option value="worldwide">General</option>
-                <option value="sports">Sports</option>
-                <option value="business">Business</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="health">Health</option>
-                <option value="science">Science</option>
-                <option value="technology">Technology</option>
-            </select>
-        </div>
+                <select id="category" name="category" onchange="changeCategory()">
+                    <option value="worldwide">General</option>
+                    <option value="sports">Sports</option>
+                    <option value="business">Business</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="health">Health</option>
+                    <option value="science">Science</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
 
-        <div>
-            <input type="text" id="search" name="search" placeholder="Enter keywords...">
-            <button onclick="searchNews()">Search</button>
+            <div style="margin-right: 20px;">
+                <input type="text" id="search" name="search" placeholder="Enter keywords...">
+                <button onclick="searchNews()">Search</button>
+            </div>
+
+            <div>
+                <a href="test.html" style="color: white; text-decoration: none;">About Us</a>
+            </div>
         </div>
-    </div>
     </header>
 
 
